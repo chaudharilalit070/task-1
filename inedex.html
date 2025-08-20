@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lalit Chaudhari — Photofolio</title>
+  <meta name="description" content="Portfolio and photo gallery of Lalit Chaudhari — MCA student and full‑stack developer." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Optional: swap with local fonts if you prefer offline -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/avatar.jpg">
+</head>
+<body>
+  <!-- Floating 3D background orbs -->
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <div class="bg-orb orb3"></div>
+
+  <header class="nav">
+    <div class="brand tilt" data-tilt>
+      <span class="logo">LC</span>
+      <span class="title">Lalit Chaudhari</span>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="glow">Hi, I’m <span class="accent">Lalit Chaudhari</span></h1>
+        <p class="subtitle">MCA student • Full‑Stack (Java + Spring Boot + React) • Photo Enthusiast</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#gallery">View Photofolio</a>
+          <a class="btn ghost" href="#projects">See My Work</a>
+        </div>
+        <ul class="badges">
+          <li>Java • Spring Boot • Hibernate</li>
+          <li>React • HTML/CSS/JS • Tailwind</li>
+          <li>MySQL • MongoDB</li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <div class="card-3d tilt" data-tilt>
+          <img src="assets/avatar.jpg" alt="Portrait of Lalit Chaudhari" />
+          <div class="card-depth">Creating, Coding & Capturing</div>
+        </div>
+      </div>
+      <div class="scroll-indicator">Scroll</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about container">
+      <div class="about-card tilt" data-tilt>
+        <h2>About Me</h2>
+        <p>
+          I’m Lalit Chaudhari, pursuing an MCA (after B.Sc. in Computer Science). I build full‑stack apps with
+          <strong>Java, Spring Boot, React</strong>, and databases like <strong>MySQL/MongoDB</strong>.
+          I ranked <strong>3rd</strong> in my graduation class and won <strong>3rd prize</strong> in an IT Coding Competition.
+        </p>
+        <p>
+          Projects I’m proud of include <strong>SmartAI – Background Removal Web App</strong> and a
+          <strong>Real‑Time Chat Application</strong>. Lately, I’m exploring microservices, OAuth2, and maps integration.
+        </p>
+        <div class="chips">
+          <span>Problem Solver</span><span>Clean Code</span><span>Dark Mode Lover</span><span>Photography</span>
+        </div>
+      </div>
+      <div class="skill-cards">
+        <div class="skill tilt" data-tilt><h3>Backend</h3><p>Spring Boot, Hibernate, JWT, REST</p></div>
+        <div class="skill tilt" data-tilt><h3>Frontend</h3><p>React, HTML, CSS, JS</p></div>
+        <div class="skill tilt" data-tilt><h3>Data</h3><p>MySQL, MongoDB</p></div>
+        <div class="skill tilt" data-tilt><h3>Tools</h3><p>Git, NPM, Vite</p></div>
+      </div>
+    </section>
+
+    <!-- 3D GALLERY WALL -->
+    <section id="gallery" class="gallery container">
+      <div class="section-head">
+        <h2>Photofolio</h2>
+        <p>Hover or tap cards for parallax & depth. Drag to rotate the 3D wall.</p>
+      </div>
+
+      <div class="wall-3d" id="wall3d" aria-live="polite">
+        <!-- Each .frame is 3D and tilts on hover -->
+        <figure class="frame tilt" data-tilt>
+          <img src="assets/gallery/pic1.jpg" alt="Photo 1" />
+          <figcaption>Golden Hour</figcaption>
+        </figure>
+        <figure class="frame tilt" data-tilt>
+          <img src="assets/gallery/pic2.jpg" alt="Photo 2" />
+          <figcaption>City Blues</figcaption>
+        </figure>
+        <figure class="frame tilt" data-tilt>
+          <img src="assets/gallery/pic3.jpg" alt="Photo 3" />
+          <figcaption>Forest Trail</figcaption>
+        </figure>
+        <figure class="frame tilt" data-tilt>
+          <img src="assets/gallery/pic4.jpg" alt="Photo 4" />
+          <figcaption>Coastal Calm</figcaption>
+        </figure>
+        <figure class="frame tilt" data-tilt>
+          <img src="assets/gallery/pic5.jpg" alt="Photo 5" />
+          <figcaption>Night Drive</figcaption>
+        </figure>
+        <figure class="frame tilt" data-tilt>
+          <img src="assets/gallery/pic6.jpg" alt="Photo 6" />
+          <figcaption>Monsoon Mood</figcaption>
+        </figure>
+      </div>
+
+      <!-- 3D Coverflow Carousel -->
+      <div class="coverflow" id="coverflow">
+        <button class="coverflow-btn prev" aria-label="Previous">‹</button>
+        <div class="coverflow-track">
+          <img src="assets/gallery/pic1.jpg" alt="Cover 1">
+          <img src="assets/gallery/pic2.jpg" alt="Cover 2">
+          <img src="assets/gallery/pic3.jpg" alt="Cover 3">
+          <img src="assets/gallery/pic4.jpg" alt="Cover 4">
+          <img src="assets/gallery/pic5.jpg" alt="Cover 5">
+          <img src="assets/gallery/pic6.jpg" alt="Cover 6">
+        </div>
+        <button class="coverflow-btn next" aria-label="Next">›</button>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects container">
+      <div class="section-head">
+        <h2>Featured Projects</h2>
+        <p>Clean code, responsive UI, and real‑world utility.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card tilt" data-tilt>
+          <img src="assets/projects/smartai.jpg" alt="SmartAI Project Screenshot">
+          <div class="pc-body">
+            <h3>SmartAI — Background Removal Web App</h3>
+            <p>React + Spring Boot app that removes image backgrounds using AI. Focus on fast uploads, clean UX, and secure API.</p>
+            <div class="tags"><span>React</span><span>Spring Boot</span><span>REST</span></div>
+            <!-- <a class="btn small" href="#" target="_blank" rel="noopener">Live</a> -->
+          </div>
+        </article>
+
+        <article class="project-card tilt" data-tilt>
+          <img src="assets/projects/chatapp.jpg" alt="Real-time Chat Application Screenshot">
+          <div class="pc-body">
+            <h3>Real‑Time Chat Application</h3>
+            <p>WebSocket + STOMP + React chat with avatars, typing indicators, and delivery status. Built for reliability and speed.</p>
+            <div class="tags"><span>React</span><span>WebSocket</span><span>STOMP</span></div>
+            <!-- <a class="btn small" href="#" target="_blank" rel="noopener">Code</a> -->
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact container">
+      <div class="contact-card tilt" data-tilt>
+        <h2>Let’s Connect</h2>
+        <p>Open to internships and full‑stack roles. Reach out for collaborations, projects, or just to say hello!</p>
+        <form class="contact-form" name="contact" netlify>
+          <div class="row">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+        <div class="socials">
+          <!-- Replace with your links -->
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Portfolio">Portfolio</a>
+          <a href="mailto:you@example.com" aria-label="Email">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Lalit Chaudhari • Built with HTML, CSS & JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
